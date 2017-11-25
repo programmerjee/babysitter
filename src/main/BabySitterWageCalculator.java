@@ -4,10 +4,12 @@ public class BabySitterWageCalculator {
 
 	int startTime;
 	int bedTime;
-	public BabySitterWageCalculator(int startTime, int bedTime) {
+	int endTime;
+	public BabySitterWageCalculator(int startTime, int bedTime, int endTime) {
 		super();
 		this.startTime = startTime;
 		this.bedTime = bedTime;
+		this.endTime = endTime;
 	}
 
 	public int startTimeToBedTimePay() {
@@ -25,6 +27,13 @@ public class BabySitterWageCalculator {
 	public int calculateWage() {
 		
 		return startTimeToBedTimePay() + bedTimeToMidnightPay();
+	}
+
+
+	public int midnightToEndTimeWage() {
+		
+		int midNightToEndTimePay=16;
+		return endTime * midNightToEndTimePay;
 	}
 
 
