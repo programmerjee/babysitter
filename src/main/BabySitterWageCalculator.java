@@ -24,17 +24,15 @@ public class BabySitterWageCalculator {
 		return (midnight - bedTime) * bedTimeToMidnightWage;
 	}
 
+	public int midnightToEndTimePay() {
+		
+		int midNightToEndTimeWage=16;
+		return endTime * midNightToEndTimeWage;
+	}
+
 	public int calculateWage() {
 		
-		return startTimeToBedTimePay() + bedTimeToMidnightPay();
+		return startTimeToBedTimePay() + bedTimeToMidnightPay() + midnightToEndTimePay();
 	}
-
-
-	public int midnightToEndTimeWage() {
-		
-		int midNightToEndTimePay=16;
-		return endTime * midNightToEndTimePay;
-	}
-
 
 }

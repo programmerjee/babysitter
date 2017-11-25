@@ -36,7 +36,19 @@ public class BabysitterWageCalculatorTest {
 	@Test
 	public void shouldCalculatePayFromMidnightToEndTime() {
 		BabySitterWageCalculator testCalc = new BabySitterWageCalculator(5, 8, 1);
-		int testPay=testCalc.midnightToEndTimeWage();
+		int testPay=testCalc.midnightToEndTimePay();
 		assertEquals(16, testPay);
+	}
+	@Test
+	public void shouldCalculatePayFrom6PMTo4AM() {
+		BabySitterWageCalculator testCalc = new BabySitterWageCalculator(6, 9, 4);
+		int testPay=testCalc.calculateWage();
+		assertEquals(124, testPay);
+	}
+	@Test
+	public void shouldCalculatePayFrom10PMTo1AM() {
+		BabySitterWageCalculator testCalc = new BabySitterWageCalculator(10, 11, 1);
+		int testPay=testCalc.calculateWage();
+		assertEquals(36, testPay);
 	}
 }
