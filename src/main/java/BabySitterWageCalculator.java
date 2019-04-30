@@ -1,5 +1,3 @@
-package main;
-
 public class BabySitterWageCalculator {
 
 	int startTime;
